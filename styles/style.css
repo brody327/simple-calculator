@@ -1,0 +1,156 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+html {
+  background-color: #737373;
+}
+
+.grid-container {
+  display: grid;
+}
+
+button {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+  color: #F2F2F2;
+  background-color: #404040
+}
+
+/* Color Theme Swatches in Hex */
+.CALC-1-hex { color: #F2F2F2; }
+.CALC-2-hex { color: #D9D9D9; }
+.CALC-3-hex { color: #737373; }
+.CALC-4-hex { color: #404040; }
+.CALC-5-hex { color: #0D0D0D; }
+
+/* Typography */
+html {
+  font-size: 24px;
+  font-family: 'Unica One', cursive;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.held-label {
+  font-size: 30px;
+}
+
+/* Header Format */
+
+/* Main Format */
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#app h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.calculator {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #0D0D0D;
+  width: 100%;
+}
+
+.display {
+  display: grid;
+  grid:
+    [row1-start] "label label" 1fr [row1-end]
+    [row2-start] "held-value held-value" 1fr [row2-end]
+    [row3-start] "next-operation next-value" 1fr [row3-end]
+    / 1fr 2fr;
+  background-color: #D9D9D9;
+  padding: 20px;
+  border: 2px solid #404040;
+  border-radius: 5px;
+}
+
+.held-label {
+  grid-area: label;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+}
+
+.held-value {
+  grid-area: held-value;
+}
+
+.next-operation {
+  grid-area: next-operation;
+}
+
+.next-value {
+  grid-area: next-value;
+}
+
+.controls {
+  display: grid;
+  grid: 
+    [row1-start] "memory operations" 1fr [row1-end]
+    [row2-start] "digits operations" 4fr [row2-end]
+    / auto auto;
+  gap: 10px 15px;
+  margin-top: 10px;
+}
+
+
+.memory {
+  grid-area: memory;
+  display: grid;
+  grid:
+    [row1-start] "clear-all clear-entry" 1fr [row2-start]
+    / 1fr 2fr;
+  gap: 10px; 
+}
+
+.clear-all {
+  grid-area: clear-all;
+  background-color: #737373;
+}
+
+.clear-entry {
+  grid-area: clear-entry;
+  background-color: #737373;
+}
+
+.operations {
+  grid-area: operations;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 25em;
+}
+
+.operations button {
+  width: 5em;
+  height: 5em;
+  margin: 0px 10px 10px 0px;
+}
+
+.digits {
+  grid-area: digits;
+  display: grid;
+  grid: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  gap: 10px; 
+}
+
+.zero {
+  grid-column: 2 / 4;
+}
+/* Footer Format */
