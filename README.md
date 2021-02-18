@@ -3,7 +3,7 @@
 
 [View Site](https://calculator-brody-faust.netlify.app)
 
-Simple Calculator is a simple JavaScript calculator app. It runs on a stack that includes: HTML/CSS, JQuery, and JavaScript. On this site, users can fill in pixels with chosen colors from a pallete to create an image. Users can randomize the color of the pallete or add their own.
+Simple Calculator is a simple JavaScript calculator app. It runs on a stack that includes: HTML/CSS, JQuery, and JavaScript.
 
 ## Motivation
 I created Simple Calculator to practice implementing a static, single page application using JQuery and JavaScript.
